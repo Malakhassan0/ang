@@ -1,0 +1,248 @@
+.products {
+	margin-top: 150px
+}
+
+.products h1 {
+	text-align: center;
+	margin-bottom: 40px
+}
+
+.products .items {
+	display: flex;
+	justify-content: center;
+	gap: 76px
+
+}
+.img-prod {
+
+  width: 100%;
+}
+
+
+.items{
+
+  overflow: hidden
+}
+
+.item{
+/*    height: 600px ;
+display: flex;
+flex-direction: column; */
+
+width: 100%;
+    height: 630px;
+    border: solid 1px rgba(49,86,121,0.3);
+    border-radius: 15px;
+}
+.item .img-prod{
+  height: 50% ;
+  margin-bottom: 10px;
+  overflow: hidden
+}
+
+.items .item .img-prod a {
+  width: 100%;
+  height: 242px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #F2F2F7;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+   border-radius: 10px;
+
+}
+
+
+.items .item .img-prod a img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.items .item .img-prod a img:hover {
+  transform: scale(1.2);
+}
+.item .content{
+  height: 30% ;
+
+}
+
+.item .content  p{
+  max-width: 350px;
+  font-size:16px;
+  color: #333;
+
+}
+
+/************************************************/
+
+.pro-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+#btn {
+  background: #222;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 16px;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+  margin: auto;
+}
+
+#btn #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#btn:hover {
+  background: transparent;
+}
+
+#btn:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
+
+
+
+/************************************************/
+
+.products .items .item:nth-child(1) {
+	background: linear-gradient(to right, #005c97, #363795)
+}
+
+.products .items .item:nth-child(1):hover {
+	box-shadow: rgb(41 64 150) 0 11px 26px -3px, rgb(0 0 0 / 4%) 0 10px 10px -5px
+}
+
+.products .items .item:nth-child(2) {
+	background: linear-gradient(to right, #4b79a1, #283e51)
+}
+
+.products .items .item:nth-child(2):hover {
+	box-shadow: rgb(67 108 144) 0 20px 25px -5px, rgb(0 0 0 / 4%) 0 10px 10px -5px
+}
+
+.products .items .item:nth-child(3) {
+	background: linear-gradient(to right, #2980b9, #2c3e50)
+}
+
+.products .items .item:nth-child(3):hover {
+	box-shadow: rgb(43 88 121) 0 20px 25px -5px, rgb(0 0 0 / 4%) 0 10px 10px -5px
+}
+
+.products .items .item {
+	text-align: center;
+	background: #0ff;
+	border-radius: 10px;
+	padding: 30px;
+  width: 400px;
+	cursor: pointer;
+	transition: box-shadow .3s ease-in-out
+}
+
+.products .items .item .lamb_head {
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+.products .items .item .lamb_head img {
+	width: 40px;
+	margin-right: 10px
+}
+
+.products .items .item .lamb_head h3 {
+	font-size: 40px
+}
+
+.products .items .item p {
+	margin-bottom: 25px;
+	margin-top: 25px;
+	font-size: 13px;
+	line-height: 20px
+}
+
+.products .items .item button {
+	border: none;
+	width: 75%;
+  margin: auto;
+	padding: 10px;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+	border-radius: 10px;
+	margin-bottom: 35px;
+	cursor: pointer
+}
+.products .items .item button:hover{
+	background: rgb(161, 145, 145);
+  color: #fff;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 80%;
+  left: 50%;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0) transparent rgb(10, 10, 10) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

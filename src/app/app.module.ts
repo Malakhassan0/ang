@@ -1,24 +1,44 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './component/login/login.component';
-import { RegisterComponent } from './component/register/register.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './pages/user/login/login.component';
+import { RegisterComponent } from './pages/user/register/register.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ProfileComponent } from './pages/user/profile/profile.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { AllbooksComponent } from './pages/books/allbooks/allbooks.component';
+import { SinglebookComponent } from './pages/books/singlebook/singlebook.component';
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent,
+    FooterComponent,
+    AllbooksComponent,
+    SinglebookComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

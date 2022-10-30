@@ -16,10 +16,10 @@
       font-family: "Poppins", sans-serif;
       height: 100vh; }
     .login a {
-      color: #92badd;
+      color: #1976ca;
       display: inline-block;
       text-decoration: none;
-      font-weight: 400; }
+      font-weight: 600; }
     .login h2 {
       text-align: center;
       font-size: 16px;
@@ -31,6 +31,7 @@
     .login .button-mm {
       background-color: #f6f6f6;
       border: none;
+      margin: 5px;
       color: #00317e;
       padding: 15px 32px;
       text-align: center;
@@ -73,7 +74,8 @@
       color: #cccccc; }
     .login h2.active {
       color: #1976ca;
-      border-bottom: 2px solid #1976ca; }
+      /* border-bottom: 2px solid #1976ca;  */
+    }
     .login input[type=button], .login input[type=submit], .login input[type=reset] {
       background-color: #1976ca;
       border: none;

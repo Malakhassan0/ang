@@ -1,0 +1,45 @@
+<div class="products">
+    <div class="container">
+      <div class="row" *ngIf="isLoaded ; else notLoaded">
+        <div class="col-md-4 col-12 mb-4 " *ngFor="let b of books">
+          <div class="items">
+            <div class="item">
+              <div class="img-prod">
+  
+        <a href="">
+                  <img [src]="img+ b.bookImg">
+                </a>
+  
+              </div>
+  
+              <div class="content">
+  
+                <div class="category">
+               <h4>{{b.title}}</h4>
+              <p>{{b.price}}</p>
+  
+                </div>
+  
+                <div class="dic">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit aut laboriosam sapiente possimus reiciendis
+                voluptatem! Dolores corporis beatae deleniti ut eveniet perferendis aliquam! Minus unde ut itaque distinctio
+                quisquam aliquam!</p>
+                </div>
+                <div class="pro-bottom">
+                  <!--  <button routerLink="/blog/{{i}}">see More </button> -->
+  
+                   <div routerLink="/single/{{b._id}}" id="btn"><span  class="noselect">see More </span><div id="circle"></div></div>
+                </div>
+  
+              </div>
+  
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #notLoaded>
+        <div class="lds-dual-ring"></div>
+      </ng-template>
+    </div>
+  </div>
