@@ -1,0 +1,11 @@
+.btn-custom{
+    background-color: #00586F;
+    color: aliceblue;
+    cursor: pointer;
+}
+.btn-custom:hover{
+    transform: scale(1.2);
+    background-color: #023745;
+    color: aliceblue;
+    cursor: pointer;
+}

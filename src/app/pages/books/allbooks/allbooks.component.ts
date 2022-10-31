@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -7,12 +8,14 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./allbooks.component.css']
 })
 export class AllbooksComponent implements OnInit {
-  isLoaded:boolean=false
- img= this._data.imgUrl
+    isLoaded:boolean=false
+    img= this._data.imgUrl
     books:any[] = []
+    cats:any []=[]
     
   constructor(private _data: DataService) { 
     this.getData()
+    // this.getcats()
 
   }
 
@@ -32,5 +35,21 @@ export class AllbooksComponent implements OnInit {
       }
     )
   }
+  // getcats(){
+  //   this._data.getCategories().subscribe(
+  //    res=>{
+  //     this.cats= res.data.category
+  //     // console.log(res.data)
+  //    },
+  //    e=>{
+  //      console.log(e.error.message)
+  //    },
+  //    ()=>{
+  //      console.log("done")
+ 
+  //    }
+  //   )
+  //  }
+ 
 
 }

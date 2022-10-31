@@ -12,6 +12,7 @@ export class SinglebookComponent implements OnInit {
   img= this._data.imgUrl
   // books:any[] = []
   id: any
+  qnt:any
     single:any ={
          id: 0,
     title: "",
@@ -26,6 +27,7 @@ export class SinglebookComponent implements OnInit {
     // createdAt?:""
     // updatedAt?:""
     }
+    cart:any[]=[]
   constructor(private _activated:ActivatedRoute, private _data:DataService) { }
 
   ngOnInit(): void {
@@ -41,11 +43,24 @@ this.getData()
         this.single= res.data
       },
       err=>{
-
+         console.log(err.error.message)
       },
       ()=>{
         console.log('done')
       }
+    )
+  }
+  AddCart(){
+    this._data.AddToCart(this.id=this._activated.snapshot.params['id'],this.qnt).subscribe(
+      res=>{
+        this.cart=res.data.cart
+      },
+      err=>{
+        console.log(err.error.message)
+     },
+     ()=>{
+       console.log('done')
+     }
     )
   }
 

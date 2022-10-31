@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+   category=    this._auth.imgUrl
   constructor(public _auth:DataService , private _router:Router) { }
 
   ngOnInit(): void {
@@ -53,5 +53,5 @@ export class NavbarComponent implements OnInit {
       }
     )
   }
-
+ 
 }

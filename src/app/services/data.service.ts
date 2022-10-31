@@ -9,7 +9,7 @@ import { User } from '../interfaces/user';
 export class DataService {
   public isLoggedIn= false
       public userData = null
-   public  imgUrl = "http://localhost:3000/"
+ public  imgUrl = "http://localhost:3000/"
 private commonUrl= "http://localhost:3000/api/"
   constructor(private _http:HttpClient) { }
 
@@ -30,5 +30,14 @@ private commonUrl= "http://localhost:3000/api/"
     }
     getSinglebook(id:any):Observable<any>{
       return this._http.get(`${this.commonUrl}book/singleBook/${id}`)
+    }
+    getCategory(category:any):Observable<any>{
+      return this._http.get(`${this.commonUrl}book/category/${category}`)
+    }
+    getCategories():Observable<any>{
+      return this._http.get(`${this.commonUrl}book/categories`)
+    }
+    AddToCart(id:any,data:any):Observable<any>{
+      return this._http.post(`${this.commonUrl}/cart/AddToCart/${id}`,data)
     }
 }

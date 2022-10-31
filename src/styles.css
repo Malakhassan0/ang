@@ -11,12 +11,12 @@
     /* Simple CSS3 Fade-in Animation */
     /* OTHERS */ }
     .login html {
-      background-color: #1976ca; }
+      background-color: #00586F; }
     .login body {
       font-family: "Poppins", sans-serif;
       height: 100vh; }
     .login a {
-      color: #1976ca;
+      color: #00586F;
       display: inline-block;
       text-decoration: none;
       font-weight: 600; }
@@ -73,11 +73,11 @@
     .login h2.inactive {
       color: #cccccc; }
     .login h2.active {
-      color: #1976ca;
-      /* border-bottom: 2px solid #1976ca;  */
+      color: #00586F;
+      /* border-bottom: 2px solid #00586F;  */
     }
     .login input[type=button], .login input[type=submit], .login input[type=reset] {
-      background-color: #1976ca;
+      background-color: #00586F;
       border: none;
       color: white;
       padding: 15px 80px;
@@ -97,7 +97,7 @@
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
     .login input[type=button]:hover, .login input[type=submit]:hover, .login input[type=reset]:hover {
-      background-color: #1976ca; }
+      background-color: #00586F; }
     .login input[type=button]:active, .login input[type=submit]:active, .login input[type=reset]:active {
       -moz-transform: scale(0.95);
       -webkit-transform: scale(0.95);
@@ -107,7 +107,7 @@
     .login input[type=text] {
       background-color: #f6f6f6;
       border: none;
-      color: #1976ca;
+      color: #00586F;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
@@ -125,7 +125,7 @@
       border-radius: 5px 5px 5px 5px; }
     .login input[type=text]:focus {
       background-color: #fff;
-      border-bottom: 2px solid #1976ca; }
+      border-bottom: 2px solid #00586F; }
     .login input[type=text]:placeholder {
       color: #cccccc; }
     .login .fadeInDown {
@@ -201,11 +201,11 @@
       bottom: -10px;
       width: 0;
       height: 2px;
-      background-color: #1976ca;
+      background-color: #00586F;
       content: "";
       transition: width 0.2s; }
     .login .underlineHover:hover {
-      color: #1976ca; }
+      color: #00586F; }
     .login .underlineHover:hover:after {
       width: 100%; }
     .login *:focus {

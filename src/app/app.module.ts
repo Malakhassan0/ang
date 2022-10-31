@@ -13,6 +13,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AllbooksComponent } from './pages/books/allbooks/allbooks.component';
 import { SinglebookComponent } from './pages/books/singlebook/singlebook.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { CategoryComponent } from './pages/books/category/category.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { AuthInterceptor } from './auth.interceptor';
     ProfileComponent,
     FooterComponent,
     AllbooksComponent,
-    SinglebookComponent
+    SinglebookComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

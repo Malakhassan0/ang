@@ -1,7 +1,7 @@
 <div class="container mt-5 mb-5" *ngIf="single.title!=''; else noBook">
     <div class="row d-flex justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card border">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="images p-3">
@@ -25,8 +25,8 @@
                                 </div>
                             </div>
                             <p class="about">by {{single.author}}</p>
-                            <div class="cart mt-4 align-items-center"> <button class="btn btn-warning text-primary text-uppercase mr-2 px-4">Add to cart</button>
-                            </div>
+                            <!-- <div class="cart mt-4 align-items-center"> <button class="btn btn-warning text-primary text-uppercase mr-2 px-4" (ngSubmit)="Addcart()">Add to cart</button>
+                            </div> -->
                         </div>
                     </div>
                 </div>
