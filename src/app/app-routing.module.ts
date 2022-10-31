@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:"edit",component:EditProfileComponent},
   {path:"register",component:RegisterComponent},
   {path:"login", component:LoginComponent, canActivate:[IsLoggedGuard]},
-  // {path:"**",component:Err404Component},
+  {path:"**",component:Err404Component},
   // {path:"category/:cat",component:CategoryComponent}
 ];
 

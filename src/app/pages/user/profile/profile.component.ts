@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   constructor(public _auth:DataService,private _router:Router) { }
 
   ngOnInit(): void {
-   this.me()
+  this.me()
   }
   me(){
     this._auth.me().subscribe(

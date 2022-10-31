@@ -11,7 +11,13 @@ import { User } from 'src/app/interfaces/user';
 })
 export class EditProfileComponent implements OnInit {
   img= this._auth.imgUrl
+  file:any
+  isSubmitted= false
+  errorMsg=''
+  msg = ""
   
+  get userName(){return this.editForm.get('userName')}
+  get email(){return this.editForm.get('email')}
   constructor(public _auth:DataService,private _router:Router) { }
   ngOnInit(): void {
     this.me()
@@ -34,13 +40,7 @@ export class EditProfileComponent implements OnInit {
     userName : new FormControl("",[Validators.required]),
     email : new FormControl("",[Validators.required , Validators.email]),
   })
-  get userName(){return this.editForm.get('userName')}
-  get email(){return this.editForm.get('email')}
-  file:any
-  isSubmitted= false
-  errorMsg=''
   handleEdit(){
-    // console.log(this.registerForm.value)
     let data : User|any = this.editForm.value
     this.isSubmitted=true
     if(this.editForm.valid){
@@ -58,11 +58,11 @@ export class EditProfileComponent implements OnInit {
         }
       )
     }
-}
+  }
   chngMyImg(event:any){
     this.file = event.target.files[0]
   }
-  msg = ""
+  
   uploadImg(){
     this.msg=""
     const myData = new FormData()
@@ -70,7 +70,8 @@ export class EditProfileComponent implements OnInit {
     this._auth.imgUpload(myData).subscribe(
       res=> {
         console.log(res)
-        this._auth.imgUpload == res.data.imgProfile
+        console.log(this._auth.userData!.imgProfile)
+        this._auth.userData.imgProfile== res.data.imgProfile
       },
       err=>{
         this.msg = "invalid image"

@@ -7,6 +7,7 @@ import { User } from '../interfaces/user';
   providedIn: 'root'
 })
 export class DataService {
+  [x: string]: any;
   public isLoggedIn= false
       public userData :any = null
  public  imgUrl = "http://localhost:3000/"
@@ -41,7 +42,7 @@ private commonUrl= "http://localhost:3000/api/"
       return this._http.post(`${this.commonUrl}cart/AddToCart/${id}`,data)
     }
     imgUpload(data:any):Observable<any>{
-      return this._http.post(`${this.commonUrl}user/imgUpload`, data)
+      return this._http.post(`${this.commonUrl}user/uploadImage`, data)
     }
     editProfile(data:User):Observable<any>{
       return this._http.patch(`${this.commonUrl}user/edituser`,data)

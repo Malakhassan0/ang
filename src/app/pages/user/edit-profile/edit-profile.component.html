@@ -1,14 +1,14 @@
 
 
 
-<div class="container">
-    <div class="edit-top">
-    <h6 class="mb-0 text-align-center title-edit">your Photo</h6>
-    <img class="profile-img" src="http://localhost:3000/{{_auth.userData?.['imgProfile']}}" height="100px" width="100px">
-    </div>
+<div class="container" >
     <div class="card">
         <div class="card-body">
             <form class="my-3" [formGroup]="editForm"  (ngSubmit)="uploadImg()"(ngSubmit)="handleEdit()" >
+                <div class="edit-top">
+                <h6 class="mb-0 text-align-center title-edit" *ngIf="_auth.userData">your Photo</h6>
+                <img  src="http://localhost:3000/{{this._auth.userData?.['imgProfile']}}" height="100px" width="100px">
+                </div>
                 <div class="row mb-3">
                     <div class="col-sm-3">
                     </div>
