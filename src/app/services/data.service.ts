@@ -8,7 +8,7 @@ import { User } from '../interfaces/user';
 })
 export class DataService {
   public isLoggedIn= false
-      public userData = null
+      public userData :any = null
  public  imgUrl = "http://localhost:3000/"
 private commonUrl= "http://localhost:3000/api/"
   constructor(private _http:HttpClient) { }
@@ -38,6 +38,12 @@ private commonUrl= "http://localhost:3000/api/"
       return this._http.get(`${this.commonUrl}book/categories`)
     }
     AddToCart(id:any,data:any):Observable<any>{
-      return this._http.post(`${this.commonUrl}/cart/AddToCart/${id}`,data)
+      return this._http.post(`${this.commonUrl}cart/AddToCart/${id}`,data)
+    }
+    imgUpload(data:any):Observable<any>{
+      return this._http.post(`${this.commonUrl}user/imgUpload`, data)
+    }
+    editProfile(data:User):Observable<any>{
+      return this._http.patch(`${this.commonUrl}user/edituser`,data)
     }
 }

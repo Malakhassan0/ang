@@ -1,0 +1,20 @@
+.profile-img{
+    width: 300px;
+}
+
+
+
+
+
+.edit-top{
+display: flex;
+justify-content: center;
+
+align-items: center; 
+ margin: 90px auto;
+}
+.title-edit{
+    margin-right: 10px;
+ 
+
+}

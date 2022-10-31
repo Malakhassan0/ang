@@ -14,6 +14,9 @@ import { AllbooksComponent } from './pages/books/allbooks/allbooks.component';
 import { SinglebookComponent } from './pages/books/singlebook/singlebook.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { CategoryComponent } from './pages/books/category/category.component';
+import { CartComponent } from './pages/books/cart/cart.component';
+import { Err404Component } from './pages/err404/err404.component';
+import { EditProfileComponent } from './pages/user/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { CategoryComponent } from './pages/books/category/category.component';
     AllbooksComponent,
     SinglebookComponent,
     CategoryComponent,
+    CartComponent,
+    Err404Component,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,

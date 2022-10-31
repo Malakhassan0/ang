@@ -8,14 +8,13 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor(private _auth:DataService,private _router:Router) { }
+  img= this._auth.imgUrl
+  constructor(public _auth:DataService,private _router:Router) { }
 
   ngOnInit(): void {
    this.me()
   }
   me(){
-    
     this._auth.me().subscribe(
       res=>{
         console.log(res)

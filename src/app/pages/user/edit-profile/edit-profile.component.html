@@ -1,0 +1,63 @@
+
+
+
+<div class="container">
+    <div class="edit-top">
+    <h6 class="mb-0 text-align-center title-edit">your Photo</h6>
+    <img class="profile-img" src="http://localhost:3000/{{_auth.userData?.['imgProfile']}}" height="100px" width="100px">
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <form class="my-3" [formGroup]="editForm"  (ngSubmit)="uploadImg()"(ngSubmit)="handleEdit()" >
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <input type="file" class="form-control" (change)="chngMyImg($event)">
+                    </div>
+                </div>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">USERNAME</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" formControlName="userName" class="form-control" value="{{this._auth.userData?.['userName']}}">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">EMAIL</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control"formControlName="email" value=" {{this._auth.userData?.['userName']}}">
+                </div>
+            </div>
+            <!-- <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Mobile</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="(320) 380-4539">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Address</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-9 text-secondary">
+                    <!-- <input type="button" class="btn btn-primary px-4" value="Save Changes"> -->
+                    <button  class="btn btn-primary px-4">submit</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+
+
+</div>

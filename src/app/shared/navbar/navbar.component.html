@@ -163,15 +163,10 @@
                                 <a class="nav-link" routerLink="/login" *ngIf="!this._auth.isLoggedIn"
                                     routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">login</a>
                             </li>
-
-
-
                             <li>
-                                <a class="nav-link"
+                                <a class="nav-link" routerLink="/me"
                                     *ngIf="this._auth.isLoggedIn">{{this._auth.userData?.['userName']}}</a>
                             </li>
-
-
                             <li class="nav-item">
                                 <a class="nav-link"  routerLink=""  *ngIf="this._auth.isLoggedIn"
                                     (click)="logout()">logout</a>
