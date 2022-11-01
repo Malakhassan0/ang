@@ -12,18 +12,18 @@ import { ProfileComponent } from './pages/user/profile/profile.component';
 import { RegisterComponent } from './pages/user/register/register.component';
 
 const routes: Routes = [
-  {path:"",component:AllbooksComponent,canDeactivate:[SureGuard]},
-  {path:"single/:id",component:SinglebookComponent},
-  {path:"me", component:ProfileComponent},
-  {path:"edit",component:EditProfileComponent},
-  {path:"register",component:RegisterComponent},
-  {path:"login", component:LoginComponent, canActivate:[IsLoggedGuard]},
-  {path:"**",component:Err404Component},
+  { path: '', component: AllbooksComponent, canDeactivate: [SureGuard] },
+  { path: 'single/:id', component: SinglebookComponent },
+  { path: 'me', component: ProfileComponent },
+  { path: 'edit', component: EditProfileComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent, canActivate: [IsLoggedGuard] },
+  { path: '**', component: Err404Component },
   // {path:"category/:cat",component:CategoryComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

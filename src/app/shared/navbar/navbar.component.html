@@ -53,128 +53,180 @@
 </nav>
  -->
 
-
-
 <header class="header" data-icms-placeholder="header">
-    <div class="container">
-        <div class="row">
-            <div class="header-wrap" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
-                <div class="logo-box">
-                    <a routerLink="#">
-                        <img src="../../../assets/image/1.jpeg" alt="book">
-                    </a>
-                </div>
-                <div class="menu-wrap">
-                    <div class="top-menu">
-                        <div class="search-wrap">
-                            <div class="close"><span class="line-a"></span><span class="line-b"></span></div>
-                            <form action="">
-                                <input type="text" placeholder="Search">
-                                <button><i class="fa fa-s"></i></button>
-                            </form>
-                        </div>
-                        <div class="accessibility-wrap">
-                            <a routerLink="javascript:void(0);" class="settings"><i class="fa-regular fa-gear"></i></a>
-                            <div class="accessibility-box">
-                                <div class="close"><span class="line-a"></span><span class="line-b"></span></div>
-                                <h2>Accessibility Options</h2>
-                                <div class="first-sec">
-                                    <a routerLink="#"><i class="fi-eye"></i></a>
-                                    <a routerLink="#"><i class="fi-a"></i></a>
-                                    <a routerLink="#"><i class="fi-a1"></i></a>
-                                </div>
-                                <a routerLink="#" class="print"><i class="fi-printer"></i><span>Print this page</span></a>
-
-                                <h2>Night Reading</h2>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-
-                            </div>
-                        </div>
-                        <a routerLink="javascript:void(0);" class="burger-menu">
-                            <div>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="main-menu">
-                        <div class="close"><span class="line-a"></span><span class="line-b"></span></div>
-                        <ul>
-                            <li> <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/"
-                                    [routerLinkActiveOptions]="{exact:true}">Home</a>
-                            </li>
-                            <li class="dropdown-list">
-                                <a routerLink="#">category </a>
-                                <div class="megamenu">
-                                    <div class="container">
-                                        <div class="menu-wrapper">
-                                            <div class="row">
-                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                                    <ul class="submenu-item">
-                                                        <a class="dropdown-item"  routerLink="" >Medical</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Food</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Science-Fiction-Fantasy-Horror</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Romance</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >computing</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Sport</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Poetry-Drama</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Travel-Holidays</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Children</a>
-                                                        <a class="dropdown-item"  routerLink="#"  >Education</a>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                                    <div class="right-content">
-                                                        <div class="row">
-                                                            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12">
-                                                                <div class="img-wrap">
-                                                                    <img src="../images/img-2.jpg" alt="" title="" />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xl-7 col-lg-6 col-md-8 col-sm-12">
-                                                                <div class="content-wrap">
-                                                                    <p>Lorem ipsum dolor sit amet, consectetur
-                                                                        adipiscing elit, sed do eiusmod tempor
-                                                                        incididunt ut labore et dolore magna aliqua.</p>
-                                                                    <div class="action-wrapper">
-                                                                        <a routerLink="#" class="read-more"><span> show
-                                                                                more</span></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="nav-link" routerLink="/register" routerLinkActive="active"
-                                    [routerLinkActiveOptions]="{exact:true}" *ngIf="!this._auth.isLoggedIn">Register</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" routerLink="/login" *ngIf="!this._auth.isLoggedIn"
-                                    routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">login</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" routerLink="/me"
-                                    *ngIf="this._auth.isLoggedIn">{{this._auth.userData?.['userName']}}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"  routerLink=""  *ngIf="this._auth.isLoggedIn"
-                                    (click)="logout()">logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div
+        class="header-wrap"
+        data-aos="fade-down"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+      >
+        <div class="logo-box">
+          <a routerLink="#">
+            <img src="../../../assets/image/1.jpeg" alt="book" />
+          </a>
         </div>
+        <div class="menu-wrap">
+          <div class="top-menu">
+            <div class="search-wrap">
+              <div class="close">
+                <span class="line-a"></span><span class="line-b"></span>
+              </div>
+              <form action="">
+                <input type="text" placeholder="Search" />
+                <button><i class="fa fa-s"></i></button>
+              </form>
+            </div>
+            <div class="accessibility-wrap">
+              <a routerLink="javascript:void(0);" class="settings"
+                ><i class="fa-regular fa-gear"></i
+              ></a>
+              <div class="accessibility-box">
+                <div class="close">
+                  <span class="line-a"></span><span class="line-b"></span>
+                </div>
+                <h2>Accessibility Options</h2>
+                <div class="first-sec">
+                  <a routerLink="#"><i class="fi-eye"></i></a>
+                  <a routerLink="#"><i class="fi-a"></i></a>
+                  <a routerLink="#"><i class="fi-a1"></i></a>
+                </div>
+                <a routerLink="#" class="print"
+                  ><i class="fi-printer"></i><span>Print this page</span></a
+                >
+
+                <h2>Night Reading</h2>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <a routerLink="javascript:void(0);" class="burger-menu">
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+          <div class="main-menu">
+            <div class="close">
+              <span class="line-a"></span><span class="line-b"></span>
+            </div>
+            <ul>
+              <li>
+                <a
+                  class="nav-link"
+                  routerLinkActive="active"
+                  aria-current="page"
+                  routerLink="/"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >Home</a
+                >
+              </li>
+              <li class="dropdown-list">
+                <a routerLink="#">category </a>
+                <div class="megamenu">
+                  <div class="container">
+                    <div class="menu-wrapper">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                          <ul class="submenu-item">
+                            <a class="dropdown-item" routerLink="">Medical</a>
+                            <a class="dropdown-item" routerLink="#">Food</a>
+                            <a class="dropdown-item" routerLink="#"
+                              >Science-Fiction-Fantasy-Horror</a
+                            >
+                            <a class="dropdown-item" routerLink="#">Romance</a>
+                            <a class="dropdown-item" routerLink="#"
+                              >computing</a
+                            >
+                            <a class="dropdown-item" routerLink="#">Sport</a>
+                            <a class="dropdown-item" routerLink="#"
+                              >Poetry-Drama</a
+                            >
+                            <a class="dropdown-item" routerLink="#"
+                              >Travel-Holidays</a
+                            >
+                            <a class="dropdown-item" routerLink="#">Children</a>
+                            <a class="dropdown-item" routerLink="#"
+                              >Education</a
+                            >
+                          </ul>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                          <div class="right-content">
+                            <div class="row">
+                              <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12">
+                                <!-- <div class="img-wrap">
+                                                                    <img src="../images/img-2.jpg" alt="" title="" />
+                                                                </div> -->
+                              </div>
+                              <div class="col-xl-7 col-lg-6 col-md-8 col-sm-12">
+                                <div class="content-wrap">
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                  </p>
+                                  <div class="action-wrapper">
+                                    <a routerLink="#" class="read-more"
+                                      ><span> show more</span></a
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  routerLink="/register"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  *ngIf="!this._auth.isLoggedIn"
+                  >Register</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  routerLink="/login"
+                  *ngIf="!this._auth.isLoggedIn"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  >login</a
+                >
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  routerLink="/me"
+                  *ngIf="this._auth.isLoggedIn"
+                  >{{this._auth.userData?.['userName']}}</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  routerLink=""
+                  *ngIf="this._auth.isLoggedIn"
+                  (click)="logout()"
+                  >logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </header>

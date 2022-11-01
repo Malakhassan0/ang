@@ -10,7 +10,8 @@ import { User } from 'src/app/interfaces/user';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent implements OnInit {
-  img= this._auth.imgUrl
+  user:any
+  // img= this._auth.imgUrl
   file:any
   isSubmitted= false
   errorMsg=''
@@ -21,18 +22,20 @@ export class EditProfileComponent implements OnInit {
   constructor(public _auth:DataService,private _router:Router) { }
   ngOnInit(): void {
     this.me()
+    console.log(this._auth)
   }
   me(){
     this._auth.me().subscribe(
       res=>{
-        console.log(res)
+        this.user = res.data
+
       },
       e=>{
         console.log(e.error.messagee)
         this._router.navigateByUrl("/me")
       },
       ()=>{
-        console.log("done")
+    
       }
     )
   }
@@ -70,8 +73,8 @@ export class EditProfileComponent implements OnInit {
     this._auth.imgUpload(myData).subscribe(
       res=> {
         console.log(res)
-        console.log(this._auth.userData!.imgProfile)
-        this._auth.userData.imgProfile== res.data.imgProfile
+        // console.log(this._auth.userData!.imgProfile)
+        // this._auth.userData.imgProfile== res.data.imgProfile
       },
       err=>{
         this.msg = "invalid image"
